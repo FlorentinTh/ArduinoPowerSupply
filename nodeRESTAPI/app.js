@@ -1,6 +1,6 @@
 'use strict';
 //Config
-var config 		= 	require('./config');
+var config 		= 	require('./modules/config');
 
 //Modules
 var express 	= 	require('express'),
