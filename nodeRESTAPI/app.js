@@ -1,9 +1,16 @@
+'use strict';
+//Config
+var config 		= 	require('./config');
+
+//Modules
 var express 	= 	require('express'),
 	app 		= 	express(),
-	port 		= 	process.env.PORT || 3000
+	port 		= 	process.env.PORT || config.PORT,
 	mongoose 	= 	require('mongoose'),
-  	Task 		= 	require('./api/models/todoModel'),
   	bodyParser 	= 	require('body-parser');
+
+//Models
+var	Task 		= 	require('./api/models/todoModel');
 
 mongoose.Promise = global.Promise;
 
