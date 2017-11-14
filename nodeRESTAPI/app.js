@@ -14,7 +14,7 @@ var	Task 		= 	require('./api/models/todoModel');
 
 mongoose.Promise = global.Promise;
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 var routes = require('./api/routes/todoRoutes');

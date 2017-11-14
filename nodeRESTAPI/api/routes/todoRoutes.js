@@ -5,7 +5,8 @@ module.exports = function(app) {
 
   app.route('/api/tasks')
     .get(todo.getTasks)
-    .post(todo.addTask);
+    .post(todo.addTask)
+    .delete(todo.deleteTasks);
 
   app.route('/api/tasks/:taskId')
     .get(todo.getTask)

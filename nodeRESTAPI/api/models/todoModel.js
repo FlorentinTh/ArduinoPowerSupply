@@ -7,17 +7,15 @@ var TaskSchema = new Schema({
     type: String,
     required: 'Please enter the name of the task.'
   },
-  date: {
+  created: {
     type: Date,
     default: Date.now
   },
   status: {
-    type: [{
-      type: String,
-      enum: ['pending', 'ongoing', 'completed']
-    }],
-    default: ['pending']
+    type: String,
+    enum: ['pending', 'ongoing', 'completed'],
+    default: 'pending'
   }
-});
+}, { versionKey: false });
 
 module.exports = mongoose.model('Tasks', TaskSchema);
